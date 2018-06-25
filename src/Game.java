@@ -1,10 +1,3 @@
-/**
- * CIS 120 Game HW
- * (c) University of Pennsylvania
- * @version 2.1, Apr 2017
- */
-
-// imports necessary libraries for Java swing
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -14,8 +7,6 @@ import javax.swing.*;
  */
 public class Game implements Runnable {
     public void run() {
-        // NOTE : recall that the 'final' keyword notes immutability even for local variables.
-
         // Top-level frame in which game components live
         final JFrame frame = new JFrame("Brick Breaker");
         frame.setLocation(100, 100);
@@ -37,7 +28,7 @@ public class Game implements Runnable {
         // Note here that when we add an action listener to the reset button, we define it as an
         // anonymous inner class that is an instance of ActionListener with its actionPerformed()
         // method overridden. When the button is pressed, actionPerformed() will be called.
-        
+
         // Reset Button
         final JButton reset = new JButton("Reset");
         reset.addActionListener(new ActionListener() {
@@ -46,7 +37,7 @@ public class Game implements Runnable {
             }
         });
         control_panel.add(reset);
-        
+
         //Play Button
         final JButton play = new JButton("Play");
         play.addActionListener(new ActionListener() {
@@ -55,7 +46,7 @@ public class Game implements Runnable {
             }
         });
         control_panel.add(play);
-        
+
         //Instructions Button
         final JButton instructions = new JButton("Instructions");
         instructions.addActionListener(new ActionListener() {
@@ -64,7 +55,7 @@ public class Game implements Runnable {
             }
         });
         control_panel.add(instructions);
-        
+
         //Leaderboard Button
         final JButton leaderboard = new JButton("Leaderboard");
         leaderboard.addActionListener(new ActionListener() {
@@ -85,7 +76,7 @@ public class Game implements Runnable {
 
     /**
      * Main method run to start and run the game. Initializes the GUI elements specified in Game and
-     * runs it. IMPORTANT: Do NOT delete! You MUST include this in your final submission.
+     * runs it. 
      */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Game());
