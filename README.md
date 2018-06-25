@@ -1,2 +1,2 @@
 # brick-breaker
-Rendition of the classic arcade game, Brickbreaker.
+Rendition of the classic arcade game, Brickbreaker
